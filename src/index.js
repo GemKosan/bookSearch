@@ -44,22 +44,13 @@ function throttle(func, limit) {
 	};
 }
 
-let searchForm = document.getElementById("search-form");
-let searchInput = document.getElementById('search-input');
-if(searchForm && searchInput){
-    searchForm.addEventListener("submit", function(event) {
-      event.preventDefault();
 
-      console.log("Submitting Query");
-
-      ReactDOM.render(
-        <React.StrictMode>
-          <QueryBooks query={searchInput.value} />
-        </React.StrictMode>,
-        document.getElementById('results-root')
-      );
-    }, false);
-}
+ReactDOM.render(
+  <React.StrictMode>
+    <QueryBooks />
+  </React.StrictMode>,
+  document.getElementById('results-root')
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

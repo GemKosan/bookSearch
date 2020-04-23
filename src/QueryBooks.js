@@ -35,15 +35,23 @@ class QueryBooks extends React.Component {
 		super(props);
 		
     this.state = {
-			query: props.query,
 			results: []
 		}
-		
-		console.log(`Constructing QueryBooks with query=${this.state.query}`);
 	}
 	
 	componentDidMount() {
-		let apiRequest = `https://www.googleapis.com/books/v1/volumes?maxResults=12&q=${this.state.query}`;
+		let searchForm = document.getElementById("search-form");
+		let searchInput = document.getElementById('search-input');
+		if(searchForm && searchInput){
+			searchForm.addEventListener("submit", function(event) {
+				event.preventDefault();
+				this.runQuery(searchInput.value);
+    	}.bind(this), false);
+		}
+	}
+	
+	runQuery(query) {
+		let apiRequest = `https://www.googleapis.com/books/v1/volumes?maxResults=12&q=${query}`;
 
 		fetch(apiRequest)
 			.then(response => response.json())
@@ -74,7 +82,7 @@ class QueryBooks extends React.Component {
 					alert(error);
 			});
 	}
-	
+
 	parseJSONResponse(json) {
 		let results = [];
 
