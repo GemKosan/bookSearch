@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <title>React App</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <!-- TODO: Add ARIA tags -->
+
+  <header role="banner">
+
+    <nav class="container-fluid navbar fixed-top navbar-expand-sm navbar-dark px-0">
+      <a href="#" class="navbar-brand nav-brand">Kvothe's Books</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target=".nav-links"
+        aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fa-toggler-icon"><i class="fas fa-bars"></i></span>
+      </button>
+      <div class="nav-links collapse navbar-collapse">
+        <ul class="navbar-nav w-100 text-right justify-content-end">
+          <li class="nav-item"><a class="nav-link" href="#">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Books</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section id="hero-section" tabindex="-1" class="container">
+      <div class="row">
+        <div id="hero-box" class="col-md-7 col-lg-5">
+          <h2>You haven't read anything yet</h2>
+          <p>They say outside of a dog, a book is man's best friend (inside of a dog it's too hard to read). Come in,
+            chat with us, share your favorite books & films, and we'll introduce you to some of the greatest friends
+            you'll ever know.</p>
+          <a href="https://www.dropbox.com/s/n48wy1e1504qlc0/Redlines.pdf?dl=0" target="_blank" class="btn btn-primary">
+            Redlines Doc Link&nbsp;&nbsp;&nbsp;<i class="fas fa-external-link-alt"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main class="bg-dark text-white">
+    <section id="search-bar" aria-label="Search for books">
+      <h2 class="hidden-title">Search for books</h2>
+      <form id="search-form" class="clearfix">
+        <input id="search-input" type="text" placeholder="Find a book!" minlength="1" maxlength="50">
+        <button type="submit">Search</button>
+      </form>
+    </section>
+
+    <section id="results" class="container" aria-label="Search results">
+      <h2 class="hidden-title">Search results</h2>
+      <div id="results-root" class="row bg-dark text-white">
+
+        <!-- ****************** CARD ************** 
+			<div class="col-lg-4">
+				<a href="#">
+					<div class="card border-light">
+						<div class="row no-gutters">
+							<div class="col-auto">
+								<img src="https://via.placeholder.com/120x178.png?text=No+image+available" class="img-fluid" alt="">
+							</div>
+							<div class="col">
+								<div class="card-block px-2">
+									<h3 class="card-title">............</h3>
+									<h4 class="card-subtitle mb-2 text-muted">by ..........</h4>
+									<p class="card-text">... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ... ...</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+			****************************************** -->
+      </div>
+
+      <div class="container">
+        <p>&nbsp;</p>
+        <h2>Some Text</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla quis urna quis suscipit. Maecenas
+          vel mauris odio. Maecenas enim odio, tristique et tortor id, auctor ornare diam. Mauris dui urna, laoreet eget
+          mi bibendum, gravida placerat velit. Morbi nunc elit, vestibulum et justo at, blandit aliquam urna. Nulla nec
+          tortor varius, condimentum felis ac, malesuada enim. Aliquam ac dui porta, tincidunt quam vel, mollis nibh.
+          Quisque ac elit nec tellus vestibulum volutpat sed a dui. Ut ipsum turpis, fermentum sit amet congue et,
+          aliquet quis nulla. Curabitur tristique in nisi sit amet elementum.</p>
+
+        <p>Curabitur gravida, nunc in blandit faucibus, nisl est sodales lectus, sit amet varius risus erat a ex. Orci
+          varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque a lorem nisi.
+          Proin leo urna, scelerisque eget neque sit amet, bibendum aliquet ligula. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Nunc non auctor nisl, sit amet pulvinar lacus. Integer aliquam odio nec nulla
+          vehicula gravida. Nullam blandit vel diam eget bibendum. Donec at lacinia dui. Vestibulum quis diam vel enim
+          ullamcorper tempus. Cras sed quam augue. Duis in ultricies purus, non vulputate dui. In hac habitasse platea
+          dictumst. Nullam non lacus mauris. Phasellus tortor lorem, laoreet et arcu et, lacinia fringilla nunc.
+          Suspendisse a suscipit leo.</p>
+
+        <p>Ut lectus mi, porta eu aliquet eu, dictum id eros. Duis faucibus venenatis tellus, in facilisis ligula
+          posuere sit amet. Sed lacinia nulla at bibendum aliquam. Vivamus vestibulum diam a risus scelerisque, et
+          interdum sem auctor. Donec vitae luctus dolor. Duis ut feugiat sapien. Vivamus non varius ligula, et rhoncus
+          lorem. Curabitur luctus turpis eget mauris egestas, quis vehicula felis molestie.</p>
+
+        <p>Nam egestas feugiat accumsan. Vivamus sapien urna, fermentum sed condimentum non, finibus sit amet lorem. Sed
+          eget pharetra leo. In eleifend dolor non elit hendrerit, at porttitor velit facilisis. Phasellus et purus
+          facilisis, faucibus leo vitae, malesuada tortor. Integer a aliquam felis. In imperdiet erat euismod nulla
+          fermentum eleifend.</p>
+        <p>&nbsp;</p>
+      </div>
+    </section>
+  </main>
+  <footer role="contentinfo">
+    <div class="container">
+      <p>2020 Created by Gem Kosan</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>

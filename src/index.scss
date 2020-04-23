@@ -1,0 +1,238 @@
+// colors
+$black: #000000;
+$white: #ffffff;
+$accent-green: #28a745;
+$gray: #c0c0c0;
+$skeleton-thumbnail: #d8d8d8;
+
+// measurements
+$content-width: 992px;
+$max-width: 1050px;
+$border-rounding: 5px;
+$card-border: solid 1px #000000;
+$card-height: 178px;
+$card-image-width: 120px;
+$nav-height: 60px;
+$viewport-margin: 15px;
+$gutter: 30px;
+$nav-link-spacing: 50px;
+
+//breakpoints
+$md-breakpoint: 991px;
+$sm-breakpoint: 768px;
+$xs-breakpoint: 576px;
+
+:root {
+	font-size: 16px;
+}
+
+body {
+	font-family: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue,
+		Arial, sans-serif;
+	background: $black;
+}
+
+p {
+	margin: 0;
+	padding: 0 0 16px 0;
+}
+
+h1 {
+	font-size: 1.7rem;
+
+	//********* medium screens and smaller **********
+	@media only screen and (max-width: $md-breakpoint) {
+		font-size: 1rem;
+	}
+}
+
+h2 {
+	font-size: 3rem;
+	font-weight: bold;
+	margin-bottom: 30px;
+
+	//********* medium screens and smaller **********
+	@media only screen and (max-width: $md-breakpoint) {
+		font-size: 2.4rem !important;
+	}
+
+	//********* small screens and smaller **********
+	@media only screen and (max-width: $sm-breakpoint) {
+		font-size: 1.5rem !important;
+	}
+}
+
+.hidden-title {
+	display: none;
+}
+
+a,
+a:hover {
+	text-decoration: none;
+}
+
+button {
+	border-radius: $border-rounding;
+	cursor: pointer;
+}
+
+header {
+	background: $gray
+		url("https://raw.githubusercontent.com/GemKosan/images/master/kvothebooks.jpg")
+		35% 0% no-repeat border-box;
+	padding: 215px 0 170px 0;
+
+	//********* medium screens and smaller **********
+	@media only screen and (max-width: $md-breakpoint) {
+		background-position: 25% 0%;
+	}
+
+	//********* small screens and smaller **********
+	@media only screen and (max-width: $sm-breakpoint) {
+		background-position: 32% 0%;
+	}
+
+	//******** extra-small screens and smaller *********
+	@media only screen and (max-width: $xs-breakpoint) {
+		header {
+			background-position: 23% 0%;
+		}
+	}
+}
+
+.main-image {
+	height: 700px;
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	object-fit: cover;
+	object-position: 50% 50%;
+}
+
+nav {
+	height: 60px;
+	background-color: rgba(0, 0, 0, 0.75);
+	transition: background-color 1s ease;
+
+	.nav-brand {
+		font-weight: bold;
+		font-family: Georgia;
+		margin-left: $viewport-margin;
+		margin-right: 50px;
+	}
+
+	&.nav-opaque {
+		background-color: rgba(0, 0, 0, 1);
+	}
+
+	.nav-links .navbar-nav .nav-item .nav-link {
+		padding: 8px 25px;
+	}
+
+	button.navbar-toggler.navbar-toggler-right {
+		color: $gray;
+		border-color: $gray;
+		margin-right: 25px;
+	}
+
+	//******** small screens and smaller *********
+	@media only screen and (max-width: $xs-breakpoint) {
+		background-color: rgba(0, 0, 0, 1);
+
+		.nav-links {
+			background-color: inherit;
+		}
+	}
+}
+
+#hero-section {
+	width: 100%;
+
+	#hero-box {
+		color: $white;
+		background-color: rgba(0, 0, 0, 0.6);
+		padding: 20px 15px 15px 15px;
+		border-radius: $border-rounding;
+
+		button {
+			display: block;
+			width: 180px;
+			margin: 20px auto 15px auto;
+			padding: 7px;
+			font-size: 1rem;
+			background-color: $accent-green;
+			border: none;
+		}
+	}
+}
+
+#search-bar {
+	position: sticky;
+	position: -webkit-sticky; // for Safari
+	z-index: 99;
+	top: $nav-height;
+	margin: 0 0 20px 0;
+	background-color: $gray;
+	height: 50px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	input,
+	button {
+		// display: inline-block;
+		float: left;
+		border: none;
+		padding: 5px 15px;
+	}
+
+	input {
+		border-radius: $border-rounding 0 0 $border-rounding;
+		color: $gray;
+	}
+
+	button {
+		border-radius: 0 $border-rounding $border-rounding 0;
+		background-color: $accent-green;
+		color: $white;
+	}
+}
+
+#results {
+	.card {
+		height: $card-height;
+		overflow: hidden;
+		margin-bottom: 20px;
+		color: $black;
+	}
+
+	.card-title {
+		font-size: 1.2rem;
+	}
+
+	.card-subtitle {
+		font-size: 0.7rem;
+	}
+
+	.card-text {
+		font-size: 0.7rem;
+		margin-top: 1rem;
+	}
+
+	//********* medium screens and smaller **********
+	@media only screen and (max-width: $md-breakpoint) {
+		.card {
+			margin-bottom: 5px;
+		}
+	}
+}
+
+footer {
+	background-color: $black;
+	color: $gray;
+
+	p {
+		padding: 1em 0;
+	}
+}
