@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import "bootstrap";
 import './index.scss';
 import QueryBooks from './QueryBooks';
 import * as serviceWorker from './serviceWorker';
