@@ -2,9 +2,11 @@ import React from 'react';
 
 
 function BookListing(props) {
+	//TODO: Make the whole card clickable but also selectable (for copy/paste)
+	//TODO: Truncate long card-text gracefully
 	return (
-		<div className="col-lg-4">
-			<a href={props.canonicalVolumeLink}>
+		<li className="col-lg-4">
+			<a href={props.canonicalVolumeLink}> 
 				<div className="card border-light">
 					<div className="row no-gutters">
 						<div className="col-auto">
@@ -26,7 +28,7 @@ function BookListing(props) {
 					</div>
 				</div>
 			</a>
-		</div>
+		</li>
 	);
 }
 

@@ -31,7 +31,6 @@ $xs-breakpoint: 576px;
 body {
 	font-family: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue,
 		Arial, sans-serif;
-	background: $black;
 }
 
 p {
@@ -155,16 +154,6 @@ nav {
 		background-color: rgba(0, 0, 0, 0.6);
 		padding: 20px 15px 15px 15px;
 		border-radius: $border-rounding;
-
-		button {
-			display: block;
-			width: 180px;
-			margin: 20px auto 15px auto;
-			padding: 7px;
-			font-size: 1rem;
-			background-color: $accent-green;
-			border: none;
-		}
 	}
 }
 
@@ -202,25 +191,35 @@ nav {
 }
 
 #results {
+
+	#results-root {
+    list-style-type: none;
+	}
+
 	.card {
 		height: $card-height;
 		overflow: hidden;
 		margin-bottom: 20px;
 		color: $black;
+	
+		&:hover {
+			box-shadow: 0 0 5px $black;
+		}
+
+		.card-title {
+			font-size: 1.2rem;
+		}
+	
+		.card-subtitle {
+			font-size: 0.7rem;
+		}
+	
+		.card-text {
+			font-size: 0.7rem;
+			margin-top: 1rem;
+		}
 	}
 
-	.card-title {
-		font-size: 1.2rem;
-	}
-
-	.card-subtitle {
-		font-size: 0.7rem;
-	}
-
-	.card-text {
-		font-size: 0.7rem;
-		margin-top: 1rem;
-	}
 
 	//********* medium screens and smaller **********
 	@media only screen and (max-width: $md-breakpoint) {
