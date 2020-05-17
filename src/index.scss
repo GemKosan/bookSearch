@@ -29,8 +29,8 @@ $xs-breakpoint: 576px;
 }
 
 body {
-	font-family: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue,
-		Arial, sans-serif;
+	font-family: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans,
+		Helvetica Neue, Arial, sans-serif;
 }
 
 p {
@@ -75,6 +75,10 @@ a:hover {
 button {
 	border-radius: $border-rounding;
 	cursor: pointer;
+}
+
+.btn-primary {
+	background-color: #006fe6;
 }
 
 header {
@@ -190,10 +194,31 @@ nav {
 	}
 }
 
-#results {
+/* Give placeholder text an accessible contrast  */
+::-webkit-input-placeholder {
+	/* Chrome/Opera/Safari */
+	color: #757575;
+	opacity: 1;
+}
+::-moz-placeholder {
+	/* Firefox 19+ */
+	color: #757575;
+	opacity: 1;
+}
+:-ms-input-placeholder {
+	/* IE 10+ */
+	color: #757575;
+	opacity: 1;
+}
+:-moz-placeholder {
+	/* Firefox 18- */
+	color: #757575;
+	opacity: 1;
+}
 
+#results {
 	#results-root {
-    list-style-type: none;
+		list-style-type: none;
 	}
 
 	.card {
@@ -201,7 +226,7 @@ nav {
 		overflow: hidden;
 		margin-bottom: 20px;
 		color: $black;
-	
+
 		&:hover {
 			box-shadow: 0 0 5px $black;
 		}
@@ -209,17 +234,16 @@ nav {
 		.card-title {
 			font-size: 1.2rem;
 		}
-	
+
 		.card-subtitle {
 			font-size: 0.7rem;
 		}
-	
+
 		.card-text {
 			font-size: 0.7rem;
 			margin-top: 1rem;
 		}
 	}
-
 
 	//********* medium screens and smaller **********
 	@media only screen and (max-width: $md-breakpoint) {
