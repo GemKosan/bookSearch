@@ -62,7 +62,7 @@ class QueryBooks extends React.Component {
 					let errorList = JSONResponse.error.errors;
 					let errorString = "Google Books volume search returned ERRORS:";
 					for(let i=0; i< errorList.length; i++)
-						errorString += `\n\t${JSON.stringify(errorList[0].message)}, ${JSON.stringify(errorList[0].reason)}`;
+						errorString += `\n\t${JSON.stringify(errorList[i].message)}, ${JSON.stringify(errorList[i].reason)}`;
 					throw(new Error(errorString));
 				}
 				return JSONResponse;
